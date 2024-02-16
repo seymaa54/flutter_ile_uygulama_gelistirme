@@ -1,4 +1,3 @@
 # column_row_practice
-## ekran görünütüsü
 
-![](1.jpg)
+![](image/1.jpg)
