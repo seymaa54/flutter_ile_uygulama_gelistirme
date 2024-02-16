@@ -40,13 +40,13 @@ Container(
 ```
 
 ### Ekran Görüntüleri
-Projenin bazı ekran görüntüleri:
 
-![Ekran Görüntüsü 1](1.jpg)
 
-![Ekran Görüntüsü 2](2.jpg)
+![Ekran Görüntüsü 1](images/1.jpg)
 
-![Ekran Görüntüsü 3](3.jpg)
+![Ekran Görüntüsü 2](images/2.jpg)
+
+![Ekran Görüntüsü 3](images/3.jpg)
 
 
 
