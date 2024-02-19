@@ -32,5 +32,5 @@ Projeye özel fontları eklemek için, Google Fonts veya benzeri bir kaynaktan i
 
 -Card ve ListTile: İletişim bilgilerini içeren kartları oluşturmak için kullanıldı.
 
-#Ekran Görüntüsü
+
 ![](images/res.jpg)
