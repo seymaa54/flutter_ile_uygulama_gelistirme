@@ -7,3 +7,6 @@ The application starts by assigning the InputPage to the home property of the Ma
 The constructor of the object created from the "user_data" page keeps all the entered data in one object. Through the necessary navigation processes, these data are transferred to the "result_page" page.
 
 The ResultPage processes the received data using the calculation method of the "calculation.dart" class and displays the results to the user. Additionally, for icons and styles, classes like "constants" and "IconGender" have been created to ensure code readability and organization.
+
+![2024-03-03 16_07_25-bilgi_testi – TestVeri dart  bilgi_testi](https://github.com/seymaa54/flutter_ile_uygulama_gelistirme/assets/127548963/a25b02ac-7c47-4ca7-b259-782e5b3524af)
+![2024-03-03 16_07_37-bilgi_testi – TestVeri dart  bilgi_testi](https://github.com/seymaa54/flutter_ile_uygulama_gelistirme/assets/127548963/c2e10598-67af-48d5-86d9-9cfd1a0a4892)
