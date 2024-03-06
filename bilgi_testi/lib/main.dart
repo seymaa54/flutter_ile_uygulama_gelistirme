@@ -31,7 +31,7 @@ class _SoruSayfasiState extends State<SoruSayfasi> {
   TestVeri1 testVeri1 = TestVeri1();
 
   void butonFonksiyonu(String secilenButon) {
-    if(testVeri1.testBittiMi()=="true"){
+    if(testVeri1.testBittiMi()==true){
 print('test bititi');
 print(testVeri1.soruIndex);
         showDialog(
