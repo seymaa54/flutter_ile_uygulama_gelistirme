@@ -1,7 +1,7 @@
 import 'package:bilgi_testi/TestVeri1.dart';
 import 'package:flutter/material.dart';
 
-import 'constansts.dart';
+import 'constants.dart';
 
 void main() => runApp(BilgiTesti());
 
@@ -31,7 +31,7 @@ class _SoruSayfasiState extends State<SoruSayfasi> {
   TestVeri1 testVeri1 = TestVeri1();
 
   void butonFonksiyonu(String secilenButon) {
-    if(testVeri1.testBittiMi()==true){
+    if(testVeri1.testBittiMi()=="true"){
 print('test bititi');
 print(testVeri1.soruIndex);
         showDialog(
