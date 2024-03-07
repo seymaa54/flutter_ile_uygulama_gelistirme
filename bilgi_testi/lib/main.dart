@@ -31,7 +31,7 @@ class _SoruSayfasiState extends State<SoruSayfasi> {
   TestVeri1 testVeri1 = TestVeri1();
 
   void butonFonksiyonu(String secilenButon) {
-    if(testVeri1.testBittiMi()=="true"){
+    if(testVeri1.testBittiMi()==true){
 print('test bititi');
 print(testVeri1.soruIndex);
         showDialog(
@@ -121,6 +121,7 @@ print(testVeri1.soruIndex);
                             size: 30.0,
                           ),
                           onPressed: () {
+                            print("butona basışdı");
                             butonFonksiyonu('false');
                           },
                         ))),
@@ -136,6 +137,8 @@ print(testVeri1.soruIndex);
                             )),
                         child: Icon(Icons.thumb_up, size: 30.0),
                         onPressed: () {
+                          print("butona basışdı");
+
                           //anonim fonksiyon şeklinde kullanılmak zorunda
                           butonFonksiyonu('true');
                         },

@@ -30,17 +30,17 @@ abstract class TestVeri {
 
   int indexArttir() {
     if (_soruIndex < _soruBankasi.length-1) {
-      _soruIndex++;
+    return  _soruIndex++;
     }
     return _soruIndex;
   }
 
   bool testBittiMi() {
     // soruındex 0-6 sorubankası 1-7
-    if (_soruIndex>=  soruBankasi.length) {
+    if (_soruIndex >= soruBankasi.length) {
       return true;
     } else {
-      print(_soruIndex.toString()+"index");
+      print(_soruIndex.toString() + "index");
       return false;
     }
   }
