@@ -12,8 +12,8 @@ class MyApp extends StatelessWidget {
           color: Colors.indigoAccent,
           child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-               // children: [TurkBayragi(100),],
-                children: [User('Şeyma')],
+              children: [TurkBayragi(100),],
+              //  children: [User('Şeyma')],
               ),
         ));
   }
