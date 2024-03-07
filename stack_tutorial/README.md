@@ -1,16 +1,8 @@
 # stack_tutorial
 
-A new Flutter project.
+It contains examples of the stack type that allows you to overlay child widgets and manage our widgets within a desired area.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![2024-03-07 18_57_47-stack_tutorial – main dart  stack_tutorial](https://github.com/seymaa54/flutter_ile_uygulama_gelistirme/assets/127548963/f9de35aa-85b1-42c5-a214-6410f6334f55)
+![2024-03-07 18_58_24-stack_tutorial – main dart  stack_tutorial](https://github.com/seymaa54/flutter_ile_uygulama_gelistirme/assets/127548963/cd5c6cb5-3c37-48d1-a066-014a55aaf22f)
