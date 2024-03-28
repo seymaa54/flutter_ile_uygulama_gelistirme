@@ -1,52 +1,54 @@
-#  Tema Değişimi ve SharedPreferences Kullanımı
+# Theme Change and Use of Shared Preferences
 
-Bu uygulama, Flutter kullanarak dinamik olarak tema değişimi sağlayan ve SharedPreferences paketini kullanarak bu değişiklikleri uygulamanın hafızasında saklayan bir örnek uygulamadır.
+This application is an example application that changes themes using Flutter and stores these changes in the application's memory using the SharedPreferences package.
 
-## Başlarken
+## When starting up
 
-`ThemeData` sınıfı, uygulamanın temasını temsil eden bir veri modeli sınıfıdır.
+The 'ThemeData' class is a data model class that represents the theme of the application.
 
-`ThemeColorData` sınıfı, uygulamanın temasını değiştiren ve bu değişiklikleri tüm widget'ları yeniden çizerek uygulamanın güncellenmesini sağlayan bir sınıftır.
-Bu sınıf, ChangeNotifier sınıfını genişletir ve teması değiştiğinde dinleyicilere bildirimde bulunur.
+ThemeColorData class is a class that changes the theme of the application and updates the application with these changes by redrawing all widgets.
+This class extends the ChangeNotifier class and notifies listeners when the theme changes.
 
-Bu sınıf değişiklikleri SharedPreferences gibi bir yerel depolama yöntemi kullanarak kaydedecek ve uygulamanın başlatılması sırasında bu kaydedilmiş değerleri yükleyecek. Bu sayede, uygulamanın son teması, kullanıcının uygulamayı kapatıp açtığında veya uygulamayı yeniden başlattığında korunacak.
+This class will save the changes using a local storage method such as SharedPreferences and load these saved values on application startup. In this way, the last contact of the application will be preserved when the user closes the application and opens it again or restarts the application.
 
 
-## Temel Kod Parçaları
+## Basic Code Fragments
 
-### ThemeData Sınıfı
+### ThemeData Class
 
-`themeColor` adında bir metod, `ThemeData` değerini döndürür. Bu metod, `_isLight` durumuna göre `light` veya `dark` temasını döndürür.
+A method called 'ThemeColor' returns 'ThemeData'. This method returns a "light" or "dark" theme based on the "_isLight" state.
 
-```dart
+darts
 ThemeData get themeColor {
-    return _isLight ? light : dark;
+       return _isLight? light: dark;
 }
-```
-toggleTheme() metodu, tema değişikliğini gerçekleştirir ve notifyListeners() metodunu çağırarak temanın değiştiğini dinleyicilere bildirir.
-```
+''''
+The toggleTheme() method handles the theme change and calls the notifyListeners() method to notify listeners that the theme has changed.
+''''
 void toggleTheme() {
-    _isLight = !_isLight;
-    saveThemeToSharedPref(_isLight);
-    notifyListeners();
+       _isLight = !_isLight;
+       saveThemeToSharedPref(_isLight);
+       notifyListeners();
 }
-```
-createSharedPrefobj() metodu, SharedPreferences verilerine erişim sağlar.
-```
+''''
+The createSharedPrefobj() method provides access to SharedPreferences data.
+''''
 Future<void> createSharedPrefobj() async {
-    _sharedPreferencesObject = await SharedPreferences.getInstance();
+       _sharedPreferencesObject = SharedPreferences.getInstance() expected;
 }
 
-```
-loadThemeFromSharedPref() metodu, uygulamanın başlangıcında SharedPreferences verilerini yükler ve temayı ayarlar.
+''''
+The loadThemeFromSharedPref() method loads the SharedPreferences data and sets the theme at the start of the application.
 
-```
+''''
 Future<void> loadThemeFromSharedPref() async {
-    if (_isLight = _sharedPreferencesObject.getBool('themeData') == null) {
-        _isLight = true;
-    } else {
-        _isLight = _sharedPreferencesObject.getBool('themeData')!;
-    }
+       if (_isLight = _sharedPreferencesObject.getBool('themeData') == null) {
+           _isLight = true;
+       } Another {
+           _isLight = _sharedPreferencesObject.getBool('themeData')!;
+       }
 }
 
-```
+''''
+[Screen_recording_20240328_140604.webm](https://github.com/seymaa54/flutter_ile_uygulama_gelistirme/assets/127548963/6bcac6b0-b459-4c47-82ea-2b3b3463188d)
+
