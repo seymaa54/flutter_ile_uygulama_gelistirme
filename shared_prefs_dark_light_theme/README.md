@@ -1,54 +1,56 @@
-# Theme Change and Use of Shared Preferences
+# Theme Change and SharedPreferences Usage
 
-This application is an example application that changes themes using Flutter and stores these changes in the application's memory using the SharedPreferences package.
+This application demonstrates theme changes using Flutter and persists these changes in the application's memory using the SharedPreferences package.
 
-## When starting up
+## Startup
 
-The 'ThemeData' class is a data model class that represents the theme of the application.
+The `ThemeData` class serves as a data model representing the application's theme.
 
-ThemeColorData class is a class that changes the theme of the application and updates the application with these changes by redrawing all widgets.
-This class extends the ChangeNotifier class and notifies listeners when the theme changes.
+The `ThemeColorData` class manages theme changes in the application. It updates all widgets by redrawing them upon theme changes. This class extends the `ChangeNotifier` class and notifies listeners when the theme changes.
 
-This class will save the changes using a local storage method such as SharedPreferences and load these saved values on application startup. In this way, the last contact of the application will be preserved when the user closes the application and opens it again or restarts the application.
-
+This class stores theme changes using local storage methods such as SharedPreferences. It loads these saved values upon application startup, preserving the application's last state when the user closes and reopens the application or restarts it.
 
 ## Basic Code Fragments
 
-### ThemeData Class
+### ThemeColorData Class
 
-A method called 'ThemeColor' returns 'ThemeData'. This method returns a "light" or "dark" theme based on the "_isLight" state.
+The `themeColor` method returns `ThemeData`. It provides either a "light" or "dark" theme based on the `_isLight` state.
 
-darts
+```dart
 ThemeData get themeColor {
-       return _isLight? light: dark;
+    return _isLight ? light : dark;
 }
-''''
-The toggleTheme() method handles the theme change and calls the notifyListeners() method to notify listeners that the theme has changed.
-''''
+```
+The toggleTheme() method manages theme changes. It calls the notifyListeners() method to inform listeners about theme changes.
+
+```dart
 void toggleTheme() {
-       _isLight = !_isLight;
-       saveThemeToSharedPref(_isLight);
-       notifyListeners();
+    _isLight = !_isLight;
+    saveThemeToSharedPref(_isLight);
+    notifyListeners();
 }
-''''
-The createSharedPrefobj() method provides access to SharedPreferences data.
-''''
+```
+The createSharedPrefobj() method grants access to SharedPreferences data.
+
+```dart
 Future<void> createSharedPrefobj() async {
-       _sharedPreferencesObject = SharedPreferences.getInstance() expected;
+    _sharedPreferencesObject = await SharedPreferences.getInstance();
 }
+```
 
-''''
-The loadThemeFromSharedPref() method loads the SharedPreferences data and sets the theme at the start of the application.
-
-''''
+The loadThemeFromSharedPref() method loads SharedPreferences data and sets the theme at application startup.
+```dart
 Future<void> loadThemeFromSharedPref() async {
-       if (_isLight = _sharedPreferencesObject.getBool('themeData') == null) {
-           _isLight = true;
-       } Another {
-           _isLight = _sharedPreferencesObject.getBool('themeData')!;
-       }
+    if (_isLight = _sharedPreferencesObject.getBool('themeData') == null) {
+        _isLight = true;
+    } else {
+        _isLight = _sharedPreferencesObject.getBool('themeData')!;
+    }
 }
+```
 
-''''
+
+
+
 [Screen_recording_20240328_140604.webm](https://github.com/seymaa54/flutter_ile_uygulama_gelistirme/assets/127548963/6bcac6b0-b459-4c47-82ea-2b3b3463188d)
 
